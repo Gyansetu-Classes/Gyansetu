@@ -1,7 +1,7 @@
 .gs-footer {
   background: var(--gs-primary);
   color: color-mix(in srgb, var(--gs-on-primary) 85%, transparent);
-  margin-top: 6rem;
+  margin-top: 9rem;
   transition: background-color 250ms ease-in-out;
 }
 
@@ -69,7 +69,11 @@
   transform: translateX(4px);
 }
 
-.gs-footer-contact-row {
+/* Specificity note: ".gs-footer-col p" above (class+element) outranks a
+   bare ".gs-footer-contact-row" class, so this has to be scoped under
+   ".gs-footer-col" too or its "display: block" wins and the icon ends up
+   stacked above the text instead of beside it. */
+.gs-footer-col .gs-footer-contact-row {
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -81,7 +85,7 @@
   flex-shrink: 0;
 }
 
-.gs-footer-contact-row a {
+.gs-footer-col .gs-footer-contact-row a {
   margin: 0;
 }
 
