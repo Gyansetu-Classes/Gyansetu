@@ -8,13 +8,26 @@ import { useScrolled } from "../../hooks/useScrolled";
 import "./Header.css";
 import "../../styles/profile.css";
 
+const SITE_URL = "https://gyansetu-classes.github.io/Gyansetu/";
+
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [linkCopied, setLinkCopied] = useState(false);
   const { profile, openModal } = useUserProfile();
   const { theme, toggleTheme } = useTheme();
   const scrolled = useScrolled();
 
   const closeMenu = () => setMenuOpen(false);
+
+  const handleShareLink = async () => {
+    try {
+      await navigator.clipboard.writeText(SITE_URL);
+      setLinkCopied(true);
+      setTimeout(() => setLinkCopied(false), 2000);
+    } catch {
+      // Clipboard API unavailable (e.g. insecure context) — nothing else to fall back to.
+    }
+  };
 
   const themeToggle = (
     <button
@@ -42,6 +55,25 @@ export default function Header() {
     </button>
   );
 
+  const shareButton = (
+    <div className="gs-share-wrap">
+      <button
+        type="button"
+        className="gs-share-btn"
+        onClick={handleShareLink}
+        aria-label="Copy site link to share"
+        title="Copy site link to share"
+      >
+        <span className="material-symbols-outlined">{linkCopied ? "check" : "share"}</span>
+      </button>
+      {linkCopied && (
+        <span className="gs-share-tooltip" role="status">
+          Link copied!
+        </span>
+      )}
+    </div>
+  );
+
   return (
     <header className={`gs-header ${scrolled ? "gs-header--scrolled" : ""}`}>
       <div className="gs-container gs-header-inner">
@@ -64,6 +96,7 @@ export default function Header() {
         <div className="gs-header-actions">
           {themeToggle}
           {profileChip}
+          {shareButton}
 
           <button
             type="button"
@@ -97,7 +130,10 @@ export default function Header() {
           <NavLink to="/contact" onClick={closeMenu}>
             Contact
           </NavLink>
-          {profileChip && <div className="gs-nav-mobile__profile">{profileChip}</div>}
+          <div className="gs-nav-mobile__profile">
+            {profileChip}
+            {shareButton}
+          </div>
         </nav>
       )}
     </header>

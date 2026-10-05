@@ -26,12 +26,14 @@ export default function Footer() {
 
         <div className="gs-footer-col">
           <h3>Contact</h3>
-          <p><a href="mailto:rohitmanna55@gmail.com">rohitmanna55@gmail.com</a></p>
-          <p><a href="tel:+919993130364">+91-9993130364</a></p>
-          <div className="gs-footer-icons">
-            <span className="material-symbols-outlined">mail</span>
-            <span className="material-symbols-outlined">share</span>
-          </div>
+          <p className="gs-footer-contact-row">
+            <span className="material-symbols-outlined" aria-hidden="true">mail</span>
+            <a href="mailto:rohitmanna55@gmail.com">rohitmanna55@gmail.com</a>
+          </p>
+          <p className="gs-footer-contact-row">
+            <span className="material-symbols-outlined" aria-hidden="true">call</span>
+            <a href="tel:+919993130364">+91-9993130364</a>
+          </p>
         </div>
       </div>
 

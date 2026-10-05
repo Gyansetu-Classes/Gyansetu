@@ -1,7 +1,7 @@
 .gs-footer {
   background: var(--gs-primary);
   color: color-mix(in srgb, var(--gs-on-primary) 85%, transparent);
-  margin-top: 3rem;
+  margin-top: 6rem;
   transition: background-color 250ms ease-in-out;
 }
 
@@ -9,7 +9,7 @@
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 2rem;
-  padding: 2.5rem 0 2rem;
+  padding: 3rem 0 2rem;
 }
 
 .gs-footer-brand p {
@@ -69,20 +69,20 @@
   transform: translateX(4px);
 }
 
-.gs-footer-icons {
+.gs-footer-contact-row {
   display: flex;
-  gap: 0.9rem;
-  margin-top: 0.4rem;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-.gs-footer-icons .material-symbols-outlined {
-  cursor: pointer;
+.gs-footer-contact-row .material-symbols-outlined {
+  font-size: 18px;
   color: color-mix(in srgb, var(--gs-on-primary) 75%, transparent);
-  transition: color 0.15s ease;
+  flex-shrink: 0;
 }
 
-.gs-footer-icons .material-symbols-outlined:hover {
-  color: var(--gs-secondary-container);
+.gs-footer-contact-row a {
+  margin: 0;
 }
 
 .gs-footer-bottom {
