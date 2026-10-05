@@ -5,11 +5,15 @@
   transition: background-color 250ms ease-in-out;
 }
 
-.gs-footer-grid {
+/* Specificity note: this div also carries ".gs-container", which sets its
+   own "padding: 0 1.5rem" (globals.css). Same specificity + later in the
+   bundle means it was winning and zeroing out the top/bottom padding
+   below — scoped under ".gs-footer" so it reliably wins instead. */
+.gs-footer .gs-footer-grid {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
   gap: 2rem;
-  padding: 3rem 0 2rem;
+  padding: 4rem 0 2rem;
 }
 
 .gs-footer-brand p {
@@ -101,9 +105,9 @@
 }
 
 @media (max-width: 768px) {
-  .gs-footer-grid {
+  .gs-footer .gs-footer-grid {
     grid-template-columns: 1fr;
     gap: 1.75rem;
-    padding: 2rem 0 1.5rem;
+    padding: 2.5rem 0 1.5rem;
   }
 }
