@@ -26,8 +26,8 @@ export default function Footer() {
 
         <div className="gs-footer-col">
           <h3>Contact</h3>
-          <p>info@gyansetu.com</p>
-          <p>+91-XXXXXXXXXX</p>
+          <p><a href="mailto:rohitmanna55@gmail.com">rohitmanna55@gmail.com</a></p>
+          <p><a href="tel:+919993130364">+91-9993130364</a></p>
           <div className="gs-footer-icons">
             <span className="material-symbols-outlined">mail</span>
             <span className="material-symbols-outlined">share</span>

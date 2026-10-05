@@ -147,7 +147,12 @@ export default function ChapterContentOverviewPage() {
 
         <div className="chapter-overview-header">
           <div>
-            <h1 className="course-title">{breadcrumbTitle()} – Resources</h1>
+            <h1 className="course-title">
+              {breadcrumbTitle()} – Resources
+              {clazz?.batchName && (
+                <span className="course-batch-pill course-title__batch">{clazz.batchName}</span>
+              )}
+            </h1>
             {chapter?.description && <p className="courses-subtitle">{chapter.description}</p>}
           </div>
 

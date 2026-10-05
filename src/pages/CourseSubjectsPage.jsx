@@ -16,6 +16,9 @@ export default function CourseSubjectsPage() {
       <div className="gs-container">
         <h1 className="course-title">
           {clazz ? clazz.name : "Class"} – Subjects
+          {clazz?.batchName && (
+            <span className="course-batch-pill course-title__batch">{clazz.batchName}</span>
+          )}
         </h1>
         {clazz?.description && (
           <p className="courses-subtitle">{clazz.description}</p>

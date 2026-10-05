@@ -85,6 +85,9 @@ export default function CoursesPage() {
                 >
                   <span className="course-badge">Class</span>
                   <h2 className="course-card__title">{cls.name}</h2>
+                  {cls.batchName && (
+                    <span className="course-batch-pill course-card__batch">{cls.batchName}</span>
+                  )}
                   {cls.description && (
                     <p className="course-card__text">
                       {cls.description.slice(0, 100)}

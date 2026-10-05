@@ -22,6 +22,9 @@ export default function CourseChaptersPage() {
         <h1 className="course-title">
           {clazz ? clazz.name : "Class"} ›{" "}
           {subject ? subject.name : "Subject"} – Chapters
+          {clazz?.batchName && (
+            <span className="course-batch-pill course-title__batch">{clazz.batchName}</span>
+          )}
         </h1>
 
         {subject?.description && (

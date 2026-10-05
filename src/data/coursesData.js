@@ -10,6 +10,7 @@
 //   {
 //     id: string            // unique slug, used in the URL, e.g. "class-9"
 //     name: string          // display name, e.g. "Class 9"
+//     batchName?: string    // this year's batch name, shown as a pill next to the class name everywhere it appears
 //     description?: string
 //     subjects: [
 //       {
@@ -47,6 +48,7 @@ export const classes = [
   {
     "id": "class-9",
     "name": "Class 9",
+    "batchName": "Zero-to-Hero Batch 2026",
     "description": "NCERT Mathematics for Class 9.",
     "subjects": [
       {
@@ -444,6 +446,7 @@ export const classes = [
   {
     "id": "class-10",
     "name": "Class 10",
+    "batchName": "Prarambh Batch 2026",
     "description": "NCERT Mathematics for Class 10.",
     "subjects": [
       {

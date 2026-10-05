@@ -4,6 +4,7 @@
 // there (see UserProfileContext.jsx / hooks/useUserProfile.js).
 
 import { createContext } from "react";
+import { getClassById } from "../data/coursesData";
 
 export const STORAGE_KEY = "gs_user_profile";
 
@@ -23,9 +24,14 @@ export const AVATARS = [
 // What content the student sees on Courses/search. "both" is the default —
 // picking a specific class narrows the site down for them, it never locks
 // anyone out of anything (they can always switch back from the same modal).
+function classLabel(classId, fallback) {
+  const batchName = getClassById(classId)?.batchName;
+  return batchName ? `${fallback} – ${batchName}` : fallback;
+}
+
 export const CLASS_PREFS = [
-  { id: "class-9", label: "Class 9 Content", icon: "looks_one" },
-  { id: "class-10", label: "Class 10 Content", icon: "looks_two" },
+  { id: "class-9", label: classLabel("class-9", "Class 9 Content"), icon: "looks_one" },
+  { id: "class-10", label: classLabel("class-10", "Class 10 Content"), icon: "looks_two" },
   { id: "both", label: "Full Access", icon: "all_inclusive" },
 ];
 export const DEFAULT_CLASS_PREF = "both";

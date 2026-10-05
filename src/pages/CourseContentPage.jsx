@@ -101,6 +101,9 @@ export default function CourseContentPage() {
           <h1 className="course-title">
             {breadcrumbTitle()} – {items.length} item
             {items.length !== 1 ? "s" : ""}
+            {clazz?.batchName && (
+              <span className="course-batch-pill course-title__batch">{clazz.batchName}</span>
+            )}
           </h1>
 
           {items.length > 0 && (

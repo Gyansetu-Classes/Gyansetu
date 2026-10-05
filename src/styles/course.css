@@ -322,6 +322,30 @@
   margin-bottom: 0.5rem;
 }
 
+/* This year's batch name — a green pill (distinct from the gold "Class"
+   badge above) shown next to the class name wherever it appears. */
+.course-batch-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 0.18rem 0.6rem;
+  border-radius: var(--gs-radius-full);
+  background: color-mix(in srgb, var(--gs-primary-container) 22%, var(--gs-surface-container-lowest));
+  color: var(--gs-primary);
+  white-space: nowrap;
+}
+
+.course-card__batch {
+  margin-bottom: 0.4rem;
+}
+
+.course-title__batch {
+  margin-left: 0.6rem;
+  vertical-align: middle;
+}
+
 /* ===========================
    Breadcrumb + description
    =========================== */
