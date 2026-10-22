@@ -178,7 +178,7 @@ export const quizzes = {
       "ch-1": {
         title: "Number Systems Quiz",
         levels: [
-// ===== LEVEL 1: FIRST STEPS (10 questions) =====
+// ===== LEVEL 1: FIRST STEPS (12 questions) =====
   {
     level: 1,
     passPercent: 60,
@@ -260,11 +260,26 @@ export const quizzes = {
       {
         id: "l1-q10",
         type: "typed",
-        question: "Write one example each of: (a) a terminating decimal, (b) a non-terminating repeating decimal, and (c) a non-terminating non-repeating decimal. (Type just your answer for part (a) here.)",
+        question: "Write an example of a terminating decimal.",
         correctAnswer: "0.5",
-        acceptedAnswers: ["0.375", "0.25", "0.75", "0.125"],
-        marks: 3,
-        timeLimitSeconds: 90,
+        acceptedAnswers: ["0.375", "0.25", "0.75", "0.125", "0.2", "0.4"],
+        marks: 1,
+      },
+      {
+        id: "l1-q11",
+        type: "typed",
+        question: "Write an example of a non-terminating repeating decimal.",
+        correctAnswer: "0.333…",
+        acceptedAnswers: ["0.3333…", "0.333...", "0.6666…", "0.666...", "0.1666…", "0.166...", "0.142857…"],
+        marks: 1,
+      },
+      {
+        id: "l1-q12",
+        type: "typed",
+        question: "Write an example of a non-terminating, non-repeating decimal.",
+        correctAnswer: "0.101001000100001…",
+        acceptedAnswers: ["0.1010010001…", "0.1234567891011…", "3.14159…", "1.41421…"],
+        marks: 1,
       },
     ],
   },
