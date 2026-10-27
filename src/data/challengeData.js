@@ -17,9 +17,9 @@
 // highlighted "This Week's Challenge" card. Past challenges can stay in the
 // array with `active: false` so students' history/badges still resolve.
 
-import IMG_W2_L1_Q16 from "../assets/images/quiz/week2/l1-q16-four-parabolas.png";
-import IMG_W2_L1_Q17 from "../assets/images/quiz/week2/l1-q17-parabola-x2-2x-8.png";
-import IMG_W2_L2_Q6 from "../assets/images/quiz/week2/l2-q6-parabola-touching-x-axis.png";
+import IMG_W2_L1_Q16 from "../assets/images/quiz/week2/l1-q16-four-parabolas.webp";
+import IMG_W2_L1_Q17 from "../assets/images/quiz/week2/l1-q17-parabola-x2-2x-8.webp";
+import IMG_W2_L2_Q6 from "../assets/images/quiz/week2/l2-q6-parabola-touching-x-axis.webp";
 
 export const challenges = {
   weekly: [
