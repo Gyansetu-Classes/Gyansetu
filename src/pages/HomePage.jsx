@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/home.css';
-import banner from '../assets/images/banner.png';
+import banner from '../assets/images/banner.webp';
 import Reveal from '../components/Reveal';
 import StatCounter from '../components/StatCounter';
 import FeatureIcon from '../components/FeatureIcon';
