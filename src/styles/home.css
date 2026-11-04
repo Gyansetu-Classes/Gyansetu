@@ -254,6 +254,66 @@
 }
 
 /* ===========================
+   New-challenge notification strip
+   =========================== */
+
+.home-announce {
+  background: var(--gs-primary-container);
+  padding: 0.75rem 0;
+}
+
+.home-announce-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  text-align: center;
+}
+
+.home-announce-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--gs-radius-full);
+  background: var(--gs-surface-container-lowest);
+  color: var(--gs-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.home-announce-badge .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.home-announce-text {
+  margin: 0;
+  color: var(--gs-on-primary-container);
+  font-size: 0.92rem;
+}
+
+.home-announce-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--gs-on-primary-container);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.home-announce-link .material-symbols-outlined {
+  font-size: 18px;
+}
+
+/* ===========================
    This Week's Challenge
    =========================== */
 

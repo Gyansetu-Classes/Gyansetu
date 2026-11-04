@@ -10,6 +10,7 @@ import { getActiveChallenge } from '../data/challengeData';
 
 export default function HomePage() {
   const weeklyChallenge = getActiveChallenge('weekly');
+  const monthlyChallenge = getActiveChallenge('monthly');
 
   return (
     <div className="home-page">
@@ -60,6 +61,25 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      {/* NEW CHALLENGE NOTIFICATION */}
+      {monthlyChallenge && (
+        <div className="home-announce">
+          <div className="gs-container home-announce-inner">
+            <span className="home-announce-badge">
+              <span className="material-symbols-outlined">celebration</span>
+              New
+            </span>
+            <p className="home-announce-text">
+              <strong>{monthlyChallenge.title}</strong> is live — all of this month's topics in one challenge.
+            </p>
+            <Link to={`/challenges/monthly/${monthlyChallenge.id}/quiz`} className="home-announce-link">
+              Play Now
+              <span className="material-symbols-outlined">arrow_forward</span>
+            </Link>
+          </div>
+        </div>
+      )}
 
       {/* THIS WEEK'S CHALLENGE */}
       {weeklyChallenge && (
