@@ -1977,8 +1977,8 @@ export const challenges = {
               id: "w3-l4-q15",
               type: "mcq",
               question: "A father's age is 3 times his son's age. 5 years ago, the father's age was 4 times the son's age at that time. Find the father's present age.",
-              options: ["t=30", "t=45", "t=60", "t=15"],
-              correctAnswer: "t=45",
+              options: ["30", "45", "60", "15"],
+              correctAnswer: "45",
               marks: 3,
             },
             {
